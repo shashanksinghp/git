@@ -1,5 +1,5 @@
 def mygen():
-    
+
     var = yield 20
     db = yield 40
     abc = yield 10
@@ -10,5 +10,5 @@ def mygen():
 g = mygen()
 next(g)
 next(g)
-g.send('asdf')
-g.send('asdfasdf')
+g.send("asdf")
+g.send("asdfasdf")

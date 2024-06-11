@@ -72,29 +72,33 @@ def division(a, b):
     except ZeroDivisionError as ex:
         raise ValueError("b must not zero")
 
-#raise from
+
+# raise from
 def divide(a, b):
     try:
         return a / b
     except ZeroDivisionError as ex:
-        raise ValueError('b must not be zero') from ex
+        raise ValueError("b must not be zero") from ex
+
 
 divide(10, 0)
 
+
 def divide(a, b):
     try:
         return a / b
     except ZeroDivisionError as ex:
-        raise ValueError('b must not be zero') from ex
+        raise ValueError("b must not be zero") from ex
 
 
 try:
     divide(10, 0)
 except ValueError as ex:
-    print('cause:', ex.__cause__)
-    print('exception:', ex)
+    print("cause:", ex.__cause__)
+    print("exception:", ex)
 
-#custom
+
+# custom
 class FahrenheitError(Exception):
     min_f = 32
     max_f = 212
@@ -104,7 +108,7 @@ class FahrenheitError(Exception):
         self.f = f
 
     def __str__(self):
-        return f'The {self.f} is not in a valid range {self.min_f, self.max_f}'
+        return f"The {self.f} is not in a valid range {self.min_f, self.max_f}"
 
 
 def fahrenheit_to_celsius(f: float) -> float:
@@ -114,8 +118,8 @@ def fahrenheit_to_celsius(f: float) -> float:
     return (f - 32) * 5 / 9
 
 
-if __name__ == '__main__':
-    f = input('Enter a temperature in Fahrenheit:')
+if __name__ == "__main__":
+    f = input("Enter a temperature in Fahrenheit:")
     try:
         f = float(f)
     except ValueError as ex:
@@ -126,4 +130,4 @@ if __name__ == '__main__':
         except FahrenheitError as ex:
             print(ex)
         else:
-            print(f'{f} Fahrenheit = {c:.4f} Celsius')
+            print(f"{f} Fahrenheit = {c:.4f} Celsius")
