@@ -20,3 +20,10 @@ def greet(name):
     # call inner function
     display_name()
 
+
+    # call inner function
+    display_name()
+
+    # call inner function
+    display_name()
+
