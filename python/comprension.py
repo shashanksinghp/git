@@ -49,3 +49,11 @@ student_scores = [
     ("Charlie", [90, 92, 94]),
 ]
 print({i: n for i, n in student_scores})
+
+# Write a function that creates a dictionary from a list of tuples, where the keys are the first elements of the tuples and the values are lists of the second elements of the tuples with the same key.
+student_scores = [
+    ("Alice", [85, 90, 92]),
+    ("Bob", [88, 87, 85]),
+    ("Charlie", [90, 92, 94]),
+]
+print({i: n for i, n in student_scores})
